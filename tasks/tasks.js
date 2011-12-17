@@ -48,7 +48,7 @@ exports.app = seep.Application.extend({
 		this.layout.add(newLayout)
 		
 		this.layout.add(new Task("Add drag’n’drop for task sorting"))
-		/*this.layout.add(new Task("Create a website on seepjs.org"))
+		this.layout.add(new Task("Create a website on seepjs.org"))
 		this.layout.add(new Task("Deploy to Duostack"))
 		this.layout.add(new Task("Add iPhone/iPad stylesheets"))
 		this.layout.add(new Task("Add a help button to the header and display keyboard controls"))
@@ -56,7 +56,7 @@ exports.app = seep.Application.extend({
 		this.layout.add(new Task("Add a trash can, with undo capability"))
 		this.layout.add(new Task("Make these tasks persistent using MongoDB"))
 		this.layout.add(new Task("Create a super-awesome, simple task manager app using Seep", true))
-		*/
+		
 		this.newTask.addListener("keydown", function(e) {
 			if(e.keyCode==40) {
 				var next = this.layout.getWidget(1)

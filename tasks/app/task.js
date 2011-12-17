@@ -20,6 +20,7 @@ exports.Task = seep.layout.Flow.extend({
 		this.doneBtn.addListener("change", function(e) {
 			this.setDone(!this.doneBtn.checked)
 		}, {bind: this})
+		this.doneBtn.tabIndex = -1
 		
 		this.deleteBtn.addListener("click", function() {
 			var index = this.parent.getWidgetIndex(this)

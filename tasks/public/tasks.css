@@ -28,12 +28,7 @@ body.seep-app {
 	}
 
 .task {
-	border-bottom: 1px solid #E8E5BA;
-	padding: 6px 0;
-	}
-
-.task:last-child {
-	border-bottom: none;
+	padding: 2px 0;
 	}
 
 .task .s-input,
@@ -68,14 +63,17 @@ body.seep-app {
 	visibility: hidden;
 	}
 
-.task:hover .s-button.delete {
-	visibility: visible;
-	}
-
 .s-checkbox.done {
 	position: absolute;
 	left: 9px;
 	top: 6px;
+	visibility: hidden;
+	}
+
+.task.focus .s-checkbox.done,
+.task:hover .s-checkbox.done,
+.task:hover .s-button.delete {
+	visibility: visible;
 	}
 
 .add-task .s-button {
