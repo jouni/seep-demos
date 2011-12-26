@@ -28,17 +28,19 @@ body.seep-app {
 	}
 
 .task {
-	padding: 2px 0;
+	padding: 0;
 	}
 
 .task .s-input,
 .add-task .s-input {
 	position: absolute;
-	left: 34px;
-	right: 64px;
+	left: 24px;
+	right: 58px;
 	-webkit-appearance: none;
 	font-family: "Helvetica Neue", sans-serif;
 	font-size: 16px;
+	border-radius: 0;
+	padding-left: 6px;
 	}
 
 .task .s-input {
@@ -47,16 +49,17 @@ body.seep-app {
 	-webkit-box-shadow: none;
 	-moz-box-shadow: none;
 	box-shadow: none;
+	border-left: 1px solid #ffbfa8;
 	}
 
-.task.done .s-input {
-	text-decoration: line-through;
+.task.done .s-input,
+.task.done .s-checkbox {
 	color: #D1C4A1;
 	}
 
 .s-button.delete {
 	position: absolute;
-	right: 20px;
+	right: 14px;
 	width: 30px;
 	padding-left: 0;
 	padding-right: 0;
@@ -65,15 +68,18 @@ body.seep-app {
 
 .s-checkbox.done {
 	position: absolute;
-	left: 9px;
+	left: 7px;
 	top: 6px;
-	visibility: hidden;
 	}
 
 .task.focus .s-checkbox.done,
 .task:hover .s-checkbox.done,
 .task:hover .s-button.delete {
 	visibility: visible;
+	}
+
+.task.focus {
+	background: #fffac7;
 	}
 
 .add-task .s-button {
@@ -103,5 +109,5 @@ body.seep-app {
 	}
 
 .task.hover {
-	background: #ddd;
+	background: #ffa8a8;
 	}

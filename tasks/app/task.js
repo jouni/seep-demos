@@ -21,6 +21,7 @@ exports.Task = seep.layout.Flow.extend({
 			this.setDone(!this.doneBtn.checked)
 		}, {bind: this})
 		this.doneBtn.tabIndex = -1
+		this.doneBtn.readOnly = true
 		
 		this.deleteBtn.addListener("click", function() {
 			var index = this.parent.getWidgetIndex(this)
